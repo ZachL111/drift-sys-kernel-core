@@ -1,0 +1,6 @@
+Package: DriftSysKernelCore
+Type: Package
+Title: DriftSysKernelCore
+Version: 0.1.0
+License: MIT
+Description: Build an R toolkit that studies kernel behavior through bounded scenario files, with conflict explanations and no credentials or hosted services.
