@@ -1,0 +1,73 @@
+{
+  "repo": "drift-sys-kernel-core",
+  "language": "R",
+  "category": "Systems programming",
+  "goal": "Build an R toolkit that studies kernel behavior through bounded scenario files, with conflict explanations and no credentials or hosted services.",
+  "review_model": {
+    "terms": [
+      "allocation pressure",
+      "dirty state",
+      "guard slack",
+      "layout drift"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "allocation pressure",
+      "signal": 41,
+      "slack": 36,
+      "drag": 14,
+      "confidence": 93,
+      "score": 169,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "dirty state",
+      "signal": 68,
+      "slack": 49,
+      "drag": 30,
+      "confidence": 94,
+      "score": 189,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "guard slack",
+      "signal": 69,
+      "slack": 34,
+      "drag": 32,
+      "confidence": 94,
+      "score": 170,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "layout drift",
+      "signal": 72,
+      "slack": 29,
+      "drag": 12,
+      "confidence": 82,
+      "score": 219,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "allocation pressure",
+      "signal": 54,
+      "slack": 49,
+      "drag": 30,
+      "confidence": 54,
+      "score": 121,
+      "lane": "watch"
+    }
+  ]
+}
